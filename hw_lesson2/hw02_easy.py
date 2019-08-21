@@ -68,6 +68,7 @@ i = 0
 while i < n:
     num_list.append(int(random.uniform(0, 100)))
     i += 1
+print(num_list)
 
 for itm in num_list:
     if itm % 2 == 0:
