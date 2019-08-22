@@ -4,6 +4,42 @@
 equation = 'y = -12x + 11111140.2121'
 x = 2.5
 # вычислите и выведите y
+equation = list(equation)
+equation.remove('y')
+equation.remove(' ')
+equation.remove('=')
+equation.remove(' ')
+equation.remove(' ')
+equation.remove('+')
+equation.remove(' ')
+
+k_list = []
+for itm in equation:
+    if itm != 'x':
+        k_list.append(itm)
+    else:
+        break
+
+k_str = ''.join(k_list)
+
+k = float(k_str)
+
+print(k)
+
+while equation[0] != 'x':
+    del equation[0]
+
+equation.remove('x')
+
+b_str = ''.join(equation)
+
+b = float(b_str)
+
+print(b)
+
+y = k * x + b
+
+print(y)
 
 
 # Задание-2: Дата задана в виде строки формата 'dd.mm.yyyy'.
